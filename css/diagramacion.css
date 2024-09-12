@@ -1,0 +1,75 @@
+html, body{
+    height: 100%;
+}
+body{
+    background: linear-gradient(white 10%, rgb(223, 176, 223), white, rgb(169, 93, 169));
+}
+#padre{
+    align-items: flex-start;
+    display:flex;
+    justify-content: center;
+    height: 400px;
+}
+#padre div{
+    height: 200px;
+    width: 20%;
+}
+#hijo1{
+    background: rgb(235, 173, 241);
+ 
+}
+#hijo2{
+    background: rgb(210, 142, 210);
+ 
+}
+#hijo3{
+    background: rgb(195, 115, 195);
+
+}
+#hijo4{
+    background: rgb(154, 73, 154);
+
+}
+.espacio{
+    background: rgba(255, 255, 255, 0.4);
+    height: 300%;
+}
+.fondo{
+    background: url(kuromi.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 300px;
+}
+.textos{
+    column-count: 3;
+    column-gap: 60px;
+    column-rule: dotted purple 0.3em;
+    margin: 0 auto;
+    text-align: justify;
+    width: 50%;
+}
+@keyframes enloquecer{
+    0%{background:purple ;}
+    20%{background:rgb(228, 83, 228) ;}
+    40%{background: rgb(92, 32, 92) ; transform: rotate(10deg);}
+    60%{background: rgb(186, 135, 186) ;}
+    80%{background: rgb(239, 207, 239);}
+    100%{background: rgb(66, 11, 66) ;}
+}
+@media screen and (max-width:500px){
+    body{
+        background: rgb(223, 161, 224);
+    }
+    #padre{
+        flex-direction: column;
+    }
+    #padre div{
+        width: 100%;
+    }
+    #padre #hijo4{
+        display:none;
+    }
+    #padre #hijo3{
+        animation: enloquecer 0.5s infinite alternate;
+    }
+}
